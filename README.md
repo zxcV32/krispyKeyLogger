@@ -21,7 +21,7 @@ Requirements
 # Steps to setup krispyKeyLogger on server - remote access logs (optional)
 1) Download server side directory to an apache2 server. Make sure that you can execute the php from a domain or ip address
   eg. http://example.com/upload.php or http://127.0.0.1/upload.php
-2) change "Krispy_logs" directory location or create a directory anywhere you want.just make sure you have write permission on that directory.Default location is "/home/user/Krispy_logs/" where 'user' is the username for current user.Change it accordingly on debian based system or enter a completely new location.
+2) Change "Krispy_logs" directory location or create a directory anywhere you want.just make sure you have write permission on that directory.Default location is "/home/user/Krispy_logs/" where 'user' is the username for current user.Change it accordingly on debian based system or enter a completely new location.
 
 
 # known bugs and other hints

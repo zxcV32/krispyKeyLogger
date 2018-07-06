@@ -32,4 +32,5 @@ Requirements
 5) onstart task option does not work for some reason, onlogon works fine in task scheduler file 'hiddencmd.bat' line 27.
 6) init2z.pyw saves the logs with a universally unique decimal number (decimal equivalent of primary mac address of the device) at the start of log file so that the server does not overwrite or reject to download logs of different victims at same day
 
-![Alt text](krispyKeyLogger/Screenshot from 2018-07-06 15-14-09.png?raw=true "Optional Title")
+![Alt text](https://raw.githubusercontent.com/zxcV32/krispyKeyLogger/master/Screenshot%20from%202018-07-06%2015-14-09.png?raw=true "Optional Title")
+

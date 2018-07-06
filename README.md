@@ -30,3 +30,4 @@ Requirements
 3) logs are sent over the internet in plain text without SSL.
 4) sometimes windows task scheduler do not starts the task on logon
 5) onstart task option does not work for some reason, onlogon works fine in task scheduler file 'hiddencmd.bat' line 27.
+6) init2z.pyw saves the logs with a universally unique decimal number (decimal equivalent of primary mac address of the device) at the start of log file so that the server does not overwrite or reject to download logs of different victims at same day

